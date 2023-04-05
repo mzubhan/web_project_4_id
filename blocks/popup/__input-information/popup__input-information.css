@@ -1,0 +1,6 @@
+.popup__input-information {
+        width: 80%;
+        border: none;
+        border-bottom: 1px rgb(0,0,0, 0.2) solid;
+        height: 28px;
+    }

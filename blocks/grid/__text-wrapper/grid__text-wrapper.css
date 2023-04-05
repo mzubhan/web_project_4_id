@@ -1,0 +1,9 @@
+.grid__text-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 246px;
+    height: 23px;
+    margin: auto;
+    margin-top: 20px;
+    justify-content: space-between;
+}

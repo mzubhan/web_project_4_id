@@ -1,0 +1,8 @@
+.popup__input-name {
+    width: 80%;
+    line-height: 17px;
+    border: none;
+    margin-bottom: 30px;
+    border-bottom: 1px rgb(0,0,0, 0.2) solid;
+    height: 28px;
+}

@@ -1,0 +1,14 @@
+.profile__information {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.78px;
+    margin: 0;
+    margin-top: 16px;
+}
+
+@media (min-width: 320px) and (max-width: 920px) {
+    .profile__information {
+        margin: auto;
+        margin-top: 14px;
+    }
+}
