@@ -6,3 +6,9 @@
     top: 45px;
     left: 0px;
 }
+
+@media (min-width: 320px) and (max-width: 920px) {
+    .header__logo {
+        left: 10%;
+    }
+}

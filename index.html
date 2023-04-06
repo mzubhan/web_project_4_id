@@ -9,77 +9,77 @@
 </head>
     
 <body class="root">
-
-    <div class="popup popup_opened" id="#popup">
-        <div class="popup__container">
-            <h2 class="popup__title">Edit profil</h2>
-            <input type="text" placeholder="Jacques Cousteau" class="popup__input-name" id="popup__input-name">
-            <input type="text" placeholder="Penjelajah" class="popup__input-information" id="popup__input-information">
-            <button type="button" class="popup__close-button"></button>
-            <button type="submit" class="popup__save-button">Simpan</button>
-        </div>
-    </div>
-
     <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="logo">
-        <div class="header__line"></div>
     </header>
 
-    <section class="section">
-        <div class="profile">
+    <main class="main">
+        <section class="profile">
             <img class="profile__photo" src="./images/image.jpg" alt="Jacques Cousteau's photo">
-            <div class="profile__name-wrapper-1">
-                <div class="profile__name-wrapper-2">
+            <div class="profile__text-wrapper">
+                <div class="profile__edit-button-wrapper">
                     <h1 class="profile__name">Jacques Cousteau</h1>
-                <button class="profile__edit-button" type="button"></button>
+                <button class="profile__edit-button" type="button" aria-label="Edit profile" title="Edit profile"></button>
                 </div>
                 <p class="profile__information">Penjelajah</p>
             </div>
-            <button class="profile__add-button"></button>
-        </div>
-        <div class="grid">
+            <button class="profile__add-button" type="button" aria-label="Add photo" title="Add photo"></button>
+        </section>
+        <section class="grid">
             <div class="grid__photo-card">
                 <img class="grid__photo" src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Lembah Yosemite">
                 <div class="grid__text-wrapper">
                     <h2 class="grid__title">Lembah Yosemite</h2>
-                    <button type="button" class="grid__love-button"></button>
+                    <button type="button" class="grid__love-button" aria-label="Love button" title="Like"></button>
                 </div>
             </div>
             <div class="grid__photo-card">
                 <img class="grid__photo" src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Gambar Danau Louise">
                 <div class="grid__text-wrapper">
                     <h2 class="grid__title">Danau Louise</h2>
-                    <button type="button" class="grid__love-button"></button>
+                    <button type="button" class="grid__love-button" aria-label="Love button" title="Like"></button>
                 </div>
             </div>
             <div class="grid__photo-card">
                 <img class="grid__photo" src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Gambar Pegunungan Bald">
                 <div class="grid__text-wrapper">
                     <h2 class="grid__title">Pegunungan Bald</h2>
-                    <button type="button" class="grid__love-button"></button>
+                    <button type="button" class="grid__love-button" aria-label="Love button" title="Like"></button>
                 </div>
             </div>
             <div class="grid__photo-card">
                 <img class="grid__photo" src="./images/kirill-pershin-1404681-unsplash-1.jpg" alt="Gambar Gunung Latemar">
                 <div class="grid__text-wrapper">
                     <h2 class="grid__title">Gunung Latemar baba</h2>
-                    <button type="button" class="grid__love-button"></button>
+                    <button type="button" class="grid__love-button" aria-label="Love button" title="Like"></button>
                 </div>
             </div>
             <div class="grid__photo-card">
                 <img class="grid__photo" src="./images/kirill-pershin-1556355-unsplash-1.jpg" alt="Gambar Vanoise National">
                 <div class="grid__text-wrapper">
                     <h2 class="grid__title">Vanoise National</h2>
-                    <button type="button" class="grid__love-button"></button>
+                    <button type="button" class="grid__love-button" aria-label="Love button" title="Like"></button>
                 </div>
             </div>
             <div class="grid__photo-card">
                 <img class="grid__photo" src="./images/kirill-pershin-1088404-unsplash-1.jpg" alt="Gambar Lago di Braies">
                 <div class="grid__text-wrapper">
                     <h2 class="grid__title">Lago di Braies</h2>
-                    <button type="button" class="grid__love-button"></button>
+                    <button type="button" class="grid__love-button" aria-label="Love button" title="Like"></button>
                 </div>
             </div>
+        </section>
+    </main>
+
+    <section class="popup popup_opened" id="#popup">
+        <div class="popup__container">
+            <h2 class="popup__title">Edit profil</h2>
+            <form class="popup__form">
+                <input type="text" placeholder="Jacques Cousteau" class="popup__input popup__input_name" id="popup__input-name" name="name" required>
+                <input type="text" placeholder="Penjelajah" class="popup__input popup__input_information" id="popup__input-information" name="pekerjaan" required>
+                <button type="submit" class="popup__save-button">Simpan</button>
+            </form>
+            <button type="button" class="popup__close-button" aria-label="close edit profile" title="close" ></button>
         </div>
     </section>
 

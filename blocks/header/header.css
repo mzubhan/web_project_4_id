@@ -6,4 +6,11 @@
     margin: auto;
     margin-bottom: 40px;
     align-items: center;
+    border-bottom: 1px solid rgb(84,84,84, 0.7);
+}
+
+@media (min-width: 320px) and (max-width: 920px) {
+    .header {
+        width: 100%;
+    }
 }

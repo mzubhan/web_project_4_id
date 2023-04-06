@@ -3,15 +3,14 @@
 
 @import url(../blocks/root/root.css);
 
-@import url(../blocks/header/__line/header__line.css);
 @import url(../blocks/header/__logo/header__logo.css);
 @import url(../blocks/header/header.css);
 
 @import url(../blocks/profile/__add-button/profile__add-button.css);
 @import url(../blocks/profile/__edit-button/profile__edit-button.css);
 @import url(../blocks/profile/__information/profile__information.css);
-@import url(../blocks/profile/__name-wrapper-1/profile__name-wrapper-1.css);
-@import url(../blocks/profile/__name-wrapper-2/profile__name-wrapper-2.css);
+@import url(../blocks/profile/__edit-button-wrapper/profile__edit-button-wrapper.css);
+@import url(../blocks/profile/__text-wrapper/profile__text-wrapper.css);
 @import url(../blocks/profile/__name/profile__name.css);
 @import url(../blocks/profile/__photo/profile__photo.css);
 @import url(../blocks/profile/profile.css);
@@ -23,13 +22,17 @@
 @import url(../blocks/grid/__title/grid__title.css);
 @import url(../blocks/grid/__photo-card/grid__photo-card.css);
 
-@import url(../blocks/popup/__close-button/pupup__close-button.css);
+@import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/popup.css);
-@import url(../blocks/popup/__input-information/popup__input-information.css);
-@import url(../blocks/popup/__input-name/popup__input-name.css);
-@import url(../blocks/popup/__pupup-container/popup__container.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__input/_information/popup__input_information.css);
+@import url(../blocks/popup/__input/_name/popup__input_name.css);
+@import url(../blocks/popup/__container/popup__container.css);
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/popup/__form/popup__form.css);
+
+@import url(../blocks/popup/_opened/popup_opened.css);
 
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
