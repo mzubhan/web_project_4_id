@@ -21,6 +21,7 @@
 @import url(../blocks/grid/__text-wrapper/grid__text-wrapper.css);
 @import url(../blocks/grid/__title/grid__title.css);
 @import url(../blocks/grid/__photo-card/grid__photo-card.css);
+@import url(../blocks/grid/__delete-button/grid__delete-button.css);
 
 @import url(../blocks/popup/__close-button/popup__close-button.css);
 @import url(../blocks/popup/popup.css);
@@ -31,7 +32,6 @@
 @import url(../blocks/popup/__save-button/popup__save-button.css);
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__form/popup__form.css);
-
 @import url(../blocks/popup/_opened/popup_opened.css);
 
 @import url(../blocks/footer/footer.css);

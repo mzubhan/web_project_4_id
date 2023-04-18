@@ -1,4 +1,5 @@
 .grid__photo-card {
+    position: relative;
     background-color: white;
     width: 282px;
     height: 361px;
