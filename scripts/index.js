@@ -22,6 +22,16 @@ let profileJob = document.querySelector('.profile__information');
 
 //PHOTO GRID
 let photoGrid = document.querySelector('.grid');
+let photoCard = photoGrid.querySelector('.grid__photo-card');
+let deletePhotoButton = photoGrid.querySelectorAll('.grid__delete-button');
+let lovePhotoButton = photoGrid.querySelectorAll('.grid__love-button');
+let imageGrid = photoGrid.querySelectorAll('.grid__photo');
+let lovePhotoButtonActive = photoGrid.querySelector('.grid__love-button_active');
+
+//POPUP PHOTO GRID
+let popupImage = document.querySelector('.image-popup');
+let popupImageContainer = popupImage.querySelector('.image-popup__container');
+let closePopupImage = popupImage.querySelector('.image-popup__delete-btn');
 
 //POPUP EDIT PROFILE
 function showDisplay(){
@@ -56,14 +66,10 @@ function closePhotoSection() {
 
 function addPhoto(titleValue, urlValue){
    let addPhotoCard = document.querySelector('.add-photo-card').content;
-
-   addPhotoCard.querySelector('.grid__title').textContent = titleValue;
-   addPhotoCard.querySelector('.grid__photo').src = urlValue;
-   addPhotoCard.querySelector('.grid__love-button').addEventListener('click', function(evt){
-      evt.target.classList.toggle('.grid__love-button_active')
-   });
-
    let addPhotoElement = addPhotoCard.querySelector('.grid__photo-card').cloneNode(true);
+
+   addPhotoElement.querySelector('.grid__title').textContent = titleValue;
+   addPhotoElement.querySelector('.grid__photo').src = urlValue;  
 
    photoGrid.appendChild(addPhotoElement);   
 }
@@ -80,6 +86,27 @@ function addPhoto(titleValue, urlValue){
    closePhotoSection()
 });
 
+// DELETE, LIKE, AND POPUP PHOTO
+function deletePhoto(evt) {
+   const target = evt.target
+   if (target.classList.contains('grid__delete-button')) {
+      target.parentElement.remove()
+   } else if (target.classList.contains('grid__love-button')) {
+      target.classList.toggle('grid__love-button_active')
+   } else if (target.classList.contains('grid__photo')) {
+
+      let title = target.closest('.grid__title');
+      let source = target.closest('.grid__photo');
+
+      popupImage.classList.add('image-popup_opened')
+
+      popupImageContainer.querySelector('.image-popup__title').textContent = target.parentElement.querySelector('.grid__title').textContent
+      popupImageContainer.querySelector('.image-popup__photo').src = target.parentElement.querySelector('.grid__photo').src
+      popupImageContainer.querySelector('.image-popup__photo').alt = target.parentElement.querySelector('.grid__photo').alt
+
+   }
+ }
+
 //FOR EDIT PROFILE
 editProfileButton.addEventListener('click', showDisplay);
 closeEditPofile.addEventListener('click', closeDisplay);
@@ -89,29 +116,49 @@ formElement.addEventListener('submit', submitText);
 addPhotoButton.addEventListener('click', openPhotoSection);
 closeAddPhoto.addEventListener('click', closePhotoSection);
 
-// const initialCards = [
-//    {
-//      name: "Lembah Yosemite",
-//      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
-//    },
-//    {
-//      name: "Danau Louise",
-//      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
-//    },
-//    {
-//      name: "Pegunungan Gundul",
-//      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg"
-//    },
-//    {
-//      name: "Gunung Latemar",
-//      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
-//    },
-//    {
-//      name: "Taman Nasional Vanoise",
-//      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg"
-//    },
-//    {
-//      name: "Lago di Braies",
-//      link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
-//    }
-//  ];
+//DELETE AND LIKE PHOTO
+photoGrid.addEventListener('click', deletePhoto)
+
+//CLOSE IMAGE POPUP
+closePopupImage.addEventListener('click', function() {
+      popupImage.classList.remove('image-popup_opened')
+})
+
+photoCard.addEventListener('click', function(event) {
+   if (event.target.className === 'grid__delete-button') {
+      photoGrid.removeChild('.grid__photo-card')
+   }
+ });
+
+
+// **CODE DUMP**
+// DELETE
+// deletePhotoButton.forEach(function(deletePhoto) {
+//    deletePhoto.addEventListener('click', function() {
+//     let photoContainer = deletePhoto.parentElement;
+//     photoContainer.remove();
+//   });
+// });
+
+// //LIKE
+// lovePhotoButton.forEach(function(lovePhoto) {
+//    lovePhoto.addEventListener('click', function() {
+//       lovePhoto.classList.add('grid__love-button_active')
+//   });
+// });
+
+//PHOTO POPUP
+// imageGrid.forEach(function(selectPhoto){
+//    selectPhoto.addEventListener('click', function() {
+//       let title = selectPhoto.closest('.grid__title');
+//       let source = selectPhoto.closest('.grid__photo');
+
+//       popupImage.classList.add('image-popup_opened')
+
+//       popupImageContainer.querySelector('.image-popup__title').textContent = selectPhoto.parentElement.querySelector('.grid__title').textContent
+//       popupImageContainer.querySelector('.image-popup__photo').src = selectPhoto.parentElement.querySelector('.grid__photo').src
+//       popupImageContainer.querySelector('.image-popup__photo').alt = selectPhoto.parentElement.querySelector('.grid__photo').alt
+
+//    })
+// })
+
