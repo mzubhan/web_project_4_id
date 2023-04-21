@@ -159,6 +159,11 @@ function popupPhoto(evt){
    popupImageContainer.querySelector('.image-popup__photo').alt = target.parentElement.querySelector('.grid__photo').alt
 }}
 
+//CLOSE IMAGE POPUP
+closePopupImage.addEventListener('click', function() {
+   popupImage.classList.remove('image-popup_opened')
+   })
+
 //FOR EDIT PROFILE
 editProfileButton.addEventListener('click', showDisplay);
 closeEditPofile.addEventListener('click', closeDisplay);
@@ -172,11 +177,6 @@ closeAddPhoto.addEventListener('click', closePhotoSection);
 photoGrid.addEventListener('click', deletePhoto);
 photoGrid.addEventListener('click', likePhoto);
 photoGrid.addEventListener('click', popupPhoto)
-
-//CLOSE IMAGE POPUP
-closePopupImage.addEventListener('click', function() {
-      popupImage.classList.remove('image-popup_opened')
-})
 
 // photoCard.addEventListener('click', function(event) {
 //    if (event.target.className === 'grid__delete-button') {
