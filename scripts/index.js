@@ -23,9 +23,9 @@ let profileJob = document.querySelector('.profile__information');
 //PHOTO GRID
 let photoGrid = document.querySelector('.grid');
 let photoCard = photoGrid.querySelector('.grid__photo-card');
-let deletePhotoButton = photoGrid.querySelectorAll('.grid__delete-button');
-let lovePhotoButton = photoGrid.querySelectorAll('.grid__love-button');
-let imageGrid = photoGrid.querySelectorAll('.grid__photo');
+let deletePhotoButton = photoGrid.querySelector('.grid__delete-button');
+let lovePhotoButton = photoGrid.querySelector('.grid__love-button');
+let imageGrid = photoGrid.querySelector('.grid__photo');
 let lovePhotoButtonActive = photoGrid.querySelector('.grid__love-button_active');
 
 //POPUP PHOTO GRID

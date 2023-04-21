@@ -1,5 +1,4 @@
 .image-popup_opened {
-    height: 100vh;
     visibility: visible;
     opacity: 1;
 }
