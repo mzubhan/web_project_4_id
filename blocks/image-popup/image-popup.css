@@ -2,7 +2,6 @@
     display: flex;
     position: fixed;
     width: 100%;
-    opacity: 1;
     height: 100vh;
     background-color: rgb(000, 000, 000, 0.5);
     z-index: 10;
